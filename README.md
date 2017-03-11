@@ -1,4 +1,4 @@
-## LoftSchool example project
+## LoftSchool JS big homework 1
 
 ### Доступные команды
 
