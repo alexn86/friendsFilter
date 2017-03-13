@@ -1,0 +1,24 @@
+.friend {
+    display: flex;
+    position: relative;
+
+    &__photo {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+    }
+
+    &__name {
+        align-self: center;
+        padding: 0 25px 0 5px;
+    }
+
+    &__action {
+        display: block;
+        @include font('FontAwesome', normal, normal, $font-awesome-size);
+        @include centered(y);
+        right: 5px;
+        color: $primary-dark;
+        cursor: pointer;
+    }
+}

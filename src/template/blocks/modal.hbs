@@ -1,0 +1,33 @@
+<section class="modal">
+    <div class="modal__container">
+        <header class="modal__header">
+            <span class="modal__header-title">Выберите друзей</span>
+            <i id="modal-close" class="modal__header-close">&#xf00d;</i>
+        </header>
+        <div class="modal__search">
+            <div class="modal__search-col">
+                <div class="modal__search-field">
+                    <input type="text" id="search-left-input" class="modal__search-input" placeholder="Начните вводить имя друга">
+                </div>
+            </div>
+            <div class="modal__search-col">
+                <div class="modal__search-field">
+                    <input type="text" id="search-right-input" class="modal__search-input" placeholder="Начните вводить имя друга">
+                </div>
+            </div>
+        </div>
+        <div class="modal__friends friends">
+            <div class="friends__col">
+                <div class="friends__title">Ваши друзья</div>
+                <ul id="friends-left-list" class="friends__list"></ul>
+            </div>
+            <div class="friends__col droppable">
+                <div class="friends__title">Друзья в списке</div>
+                <ul id="friends-right-list" class="friends__list"></ul>
+            </div>
+        </div>
+        <footer class="modal__footer">
+            <button id="button-save" class="modal__footer-btn">Сохранить</button>
+        </footer>
+    </div>
+</section>

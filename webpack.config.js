@@ -11,12 +11,20 @@ loaders.push({
         loader: 'css-loader'
     })
 });
+loaders.push({
+    test: /\.scss$/,
+    loader: ExtractTextPlugin.extract({
+        fallbackLoader: 'style-loader',
+        loader: ['css-loader', 'sass-loader']
+    })
+});
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/js/index.js',
     output: {
         filename: '[hash].js',
-        path: './dist'
+        path: './dist',
+        // publicPath: './dist/'
     },
     devtool: 'source-map',
     module: {
@@ -31,8 +39,8 @@ module.exports = {
         }),
         new ExtractTextPlugin('styles.css'),
         new HtmlPlugin({
-            title: 'Loft School sample project',
-            template: 'index.hbs'
+            title: 'Friends Filter - LoftSchool project 1',
+            template: './src/template/index.hbs',
         }),
         new CleanWebpackPlugin(['dist'])
     ]
